@@ -1,0 +1,50 @@
+/* Product Page Styles */
+
+.cover {
+	max-width: 340px;
+	margin: 0 10px 10px 10px;
+}
+.cover img {
+	max-width: 100%;
+}
+.additional-imgs {
+	margin-top: 40px;
+	margin-bottom: 15px;
+	max-width: 100%;
+}
+.additional-imgs-ul, .additional-imgs-ul li {
+	width: 100%;
+}
+.additional-img {
+    width: 800px;
+    max-width: 100%
+}
+.additional-img img {
+    width: 100%;
+}
+.purchase-link {
+	display: inline-block;
+    background-color: #de0000;
+    color: #fff;
+    font-size: 25px;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.purchase-link .fa {
+	color: #fff;
+}
+.purchase-link:hover {
+	box-shadow: 2px 2px 6px #808080;
+}
+
+@media only screen and (min-width: 480px) {
+	.cover {
+		float: left;
+		width: 45%;
+		max-width: 340px;
+		margin: 0 20px 10px 10px;
+	}
+}
+

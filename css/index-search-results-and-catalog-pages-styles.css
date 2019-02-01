@@ -1,0 +1,67 @@
+/* Home Page (index) and Catalog Styles */
+
+.section {
+    margin: 20px;
+}
+.section-title {
+    border-bottom: 2px solid #000;
+}
+.products, .search-results, .games-in-category {
+	text-align: center;
+}
+.products li, .search-results li, .games-in-category li {
+	max-width: 100%;
+	vertical-align: top;
+}
+.product {
+    width: 350px;
+    max-width: 100%;
+    align-items: center;
+}
+.product-image, .product-image img  {
+    width: 100%;
+}
+.product-name, .product-price {
+    text-align: center;
+    margin: 5px 0;
+}
+
+@media only screen and (min-width: 480px) {
+	.products, .search-results, .games-in-category {
+		text-align: left;
+	}
+	.products li, .search-results li, .games-in-category li {
+		width: 48%;
+		margin-left: 1%;
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	h2 {
+		margin-top: 25px;
+	}
+	.products li, .search-results li, .games-in-category li {
+		width: 31.5%;
+		vertical-align: top;
+	}
+}
+
+@media only screen and (min-width: 1100px) {
+	h2 {
+		margin-top: 20px;
+	}
+	.product {
+		box-sizing: border-box;
+	    padding: 10px;
+	    border-radius: 4px;
+		margin-bottom: 10%;
+	}
+	.product:hover {
+		position: relative;
+		left: -3%;
+		width: 106%;
+		max-width: 370px;
+		margin-bottom: 1.6%;
+		box-shadow: 2px 2px 6px #808080;
+	}
+}

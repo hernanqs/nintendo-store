@@ -1,0 +1,65 @@
+/*Purchase Page Styles*/
+
+.purchase-cover {
+	max-width: 340px;
+	margin: 10px;
+}
+.purchase-cover img {
+	max-width: 100%;
+}
+.purchase-form input[type="number"] {
+	margin: 0 10px;
+}
+.purchase-fieldset {
+	margin: 20px 0;
+}
+.radio-form-field {
+	display: inline-block;
+	margin: 0 10px;
+}
+fieldset.form-field {
+	border: none;
+	padding: 0;
+}
+fieldset[disabled], .purchase-fieldset[disabled] {
+	color: #808080;
+}
+
+@media only screen and (min-width: 480px) {
+	.purchase-form {
+		width: 600px;
+		max-width: 75%;
+	}
+}
+@media only screen and (min-width: 800px) {
+	.purchase-cover {
+		float: right;
+		width: 45%;
+		max-width: 340px;
+		margin-left: 30px;
+	}
+}
+
+.price-table {
+	table-layout: fixed;
+	width: 400px;
+	max-width: 100%;
+	text-align: center;
+	margin-top: 40px;
+}
+.price-table th:first-child {
+	width: 70%;
+}
+.price-table th:last-child {
+	width: 30%;
+}
+.price-table-body tr:nth-child(even) {
+	background-color: #d0d0d0;
+}
+.price-table-head tr {
+	background-color: #de0000;
+	color: #fff;
+}
+.price-table-foot tr {
+	font-weight: bold;
+}

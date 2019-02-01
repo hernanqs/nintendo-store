@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/log-in-sign-up-and-contact-pages-styles.css">
     <title>Nintendo Store | Crear cuenta</title>
     <meta name="description" content="Tienda online de juegos de Nintendo. Puedes comprar juegos de Switch, 3DS, Wii U, DS y Wii">
     <meta name="keywords" content="Nintendo, juegos, Switch, 3DS, Wii U, DS, Wii">
@@ -21,28 +22,38 @@
         <button class="menu-icon" id="dropdown-btn" onclick="toggleDropdown()">
             <span class="fa fa-bars"></span>
         </button>
-        <div class="main-navbar dropdown">
-            <a href="sign-up.html">Crear cuenta</a>
-            <a href="log-in.html">Iniciar sesión</a>
-        </div>
-        <nav class="sub-navbar dropdown">
-            <ul class="navbar-ul">
-                <li class="navbar-item navbar-li"> <a href="catalog.html">Switch</a> </li>
-                <li class="navbar-item navbar-li"> <a href="catalog.html">3DS</a> </li>
-                <li class="navbar-item navbar-li"> <a href="catalog.html">Wii U</a> </li>
-                <li class="navbar-item navbar-li"> <a href="catalog.html">DS</a> </li>
-                <li class="navbar-item navbar-li"> <a href="catalog.html">Wii</a> </li>
-            </ul>
-            <form action="" class="navbar-form">
-                <input class="navbar-item navbar-form-input" type="text" placeholder="Buscar">
-                <button class="navbar-form-button" type="submit"><span class="fa fa-search navbar-item"></span></button>
+        <nav class="dropdown">
+
+            <form action="" id="search-form" class="navbar-form">
+                <input class="navbar-item navbar-form-input" id="search-text" type="text" placeholder="Buscar">
+                <button class="navbar-form-button" id="search-btn" type="submit"><span class="fa fa-search navbar-item"></span></button>
             </form>
+
+            <div class="sub-dropdown" id="catalog-sub-dropdown">
+                <button class="sub-dropdown-btn navbar-item" onclick="toggleCatalogSubDropdown()">Catálogo</button>
+                <ul class="navbar-ul catalog-ul">
+                    <li class="navbar-item navbar-li"> <a href="catalog.html?category=ALL">Todos</a> </li>
+                    <li class="navbar-item navbar-li"> <a href="catalog.html?category=switch">Switch</a> </li>
+                    <li class="navbar-item navbar-li"> <a href="catalog.html?category=n3ds">3DS</a> </li>
+                    <li class="navbar-item navbar-li"> <a href="catalog.html?category=wii-u">Wii U</a> </li>
+                    <li class="navbar-item navbar-li"> <a href="catalog.html?category=ds">DS</a> </li>
+                    <li class="navbar-item navbar-li"> <a href="catalog.html?category=wii">Wii</a> </li>
+                </ul>
+            </div>
+
+            <div class="sub-dropdown" id="log-sub-dropdown">
+                <button class="sub-dropdown-btn navbar-item" id="log-sub-dropdown-btn" onclick="toggleLogSubDropdown()">Ingresar</button>
+                <ul class="navbar-ul log-ul" id="log-ul">
+                    <li class="navbar-item navbar-li"> <a href="sign-up.html">Crear cuenta</a> </li>
+                    <li class="navbar-item navbar-li"> <a href="log-in.html">Iniciar sesión</a> </li>
+                </ul>
+            </div>
         </nav>
     </header>
         
     <!-- Start of Sign Up Page Content -->
 
-    <main class="main-content">
+    <main class="main-content" id="main-content">
 
         <h1>Crear una cuenta:</h1>
 
@@ -57,10 +68,32 @@
                 <label for="surname">Apellido: </label>
                 <input type="text" name="surname" id="surname" required>
             </div>
-        
+ 
             <div class="form-field">
-                    <label for="email">Mail: </label>
+                <label for="email">Mail: </label>
                 <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="form-field">
+                <label for="address">Dirección de envío: </label>
+                <input type="text" name="surname" id="address" required>
+            </div>
+
+            <fieldset class="sign-up-fieldset" id="payment-means-fieldset">
+                <legend>Medio de pago: </legend>
+                <div class="radio-form-field">
+                    <label for="credit-card">Tarjeta de crédito</label>
+                    <input type="radio" name="payment-means" id="credit-card" required checked>
+                </div>
+                <div class="radio-form-field">
+                    <label for="paypal">Paypal</label>
+                    <input type="radio" name="payment-means" id="paypal" required>
+                </div>
+            </fieldset>
+
+            <div class="form-field">
+                <label for="payment-account" id="payment-account-label"></label>
+                <input type="text" name="surname" id="payment-account" required>
             </div>
         
             <div class="form-field">
@@ -69,8 +102,8 @@
             </div>
         
             <div class="form-field">
-                <label for="password">Repetir contraseña:</label>
-                <input type="password" id="repeat-password" name="password" pattern="[0-9a-fA-F]{8,24}" minlength="8" maxlength="24" required>
+                <label for="repeat-password">Repetir contraseña:</label>
+                <input type="password" id="repeat-password" name="repeat-password" pattern="[0-9a-fA-F]{8,24}" minlength="8" maxlength="24" required>
             </div>
         
             <div class="form-field">
@@ -107,7 +140,9 @@
 
     </footer>
 
+    <script src="data/games.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/sign-up.js"></script>
 
 </body>
 </html>

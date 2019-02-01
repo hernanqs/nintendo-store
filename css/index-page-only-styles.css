@@ -1,0 +1,132 @@
+/* Home Page (index) Carousel Styles */
+
+.carousel {
+	width: 100%;
+	margin: 0;
+	position: relative;
+	font-size: 0;
+}
+.carousel-input {
+	display: none;
+}
+.carousel-labels {
+	display: none;
+}
+
+@media only screen and (min-width: 480px) {
+	.carousel-labels {
+		display: block;
+		position: absolute;
+		text-align: justify;
+		z-index: 9;
+		width: 20%;
+		height: 40px;
+		top: 85%;
+		left: 40%;
+		right: 40%;
+	}
+	.carousel-labels:after {
+		content: "";
+		margin-left: 100%;
+	}
+	.carousel-label {
+		display: inline-block;
+		width: 20%;
+		padding-top: 20%;
+		border-radius: 50%;
+		background-color: #808080;
+		opacity: 0.7;
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	.carousel-label {
+		display: inline-block;
+		width: 15%;
+		padding-top: 15%;
+		border-radius: 50%;
+		background-color: #808080;
+		opacity: 0.7;
+	}
+}
+#carousel-input-1:checked ~ .carousel-labels #carousel-label-1 {
+	background-color: #fff;
+}
+#carousel-input-2:checked ~ .carousel-labels #carousel-label-2 {
+	background-color: #fff;
+}
+#carousel-input-3:checked ~ .carousel-labels #carousel-label-3 {
+	background-color: #fff;
+}
+.carousel-slides {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.carousel-slide {
+	width: 100%;
+	height: 100%;
+	display: none;
+	transition: transform 1s ease 0s;
+}
+#carousel-input-1:checked ~ .carousel-slides #carousel-slide-1 {
+	display: block;
+	animation: show-slide 1s ease;
+}
+#carousel-input-2:checked ~ .carousel-slides #carousel-slide-2 {
+	display: block;
+	animation: show-slide 1s ease;
+}
+#carousel-input-3:checked ~ .carousel-slides #carousel-slide-3 {
+	display: block;
+	animation: show-slide 1s ease;
+}
+@keyframes show-slide {
+    from {opacity: 0.8;}
+    to {opacity: 1;}
+}
+.carousel-forwards, .carousel-backwards {
+	width: 10%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+.carousel-backwards {
+	left: 0;
+	background-image: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0));
+}
+.carousel-forwards {
+	right: 0;
+	background-image: linear-gradient(to left, rgba(0,0,0,0.8), rgba(0,0,0,0));
+}
+.slide-arrow-left, .slide-arrow-right {
+	font-size: 50px;
+	position: absolute;
+	bottom: 40%;
+	color: #fff;
+}
+.slide-arrow-left {
+	left: 5%;
+}
+.slide-arrow-right {
+	right: 5%;
+}
+
+@media only screen and (min-width: 480px) {
+	.slide-arrow-left, .slide-arrow-right {
+		font-size: 70px;
+		bottom: 40%;
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	.slide-arrow-left, .slide-arrow-right {
+		font-size: 70px;
+		bottom: 45%;
+	}	
+}
+
+.carousel-image {
+	width: 100%;
+	margin: 0;
+}

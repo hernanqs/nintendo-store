@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/index-search-results-and-catalog-pages-styles.css">
-    <title>Nintendo Store | Catálogo</title>
+    <link rel="stylesheet" href="css/search-results-page-only-styles.css">
+    <title>Nintendo Store | Resultados de búsqueda</title>
     <meta name="description" content="Tienda online de juegos de Nintendo. Puedes comprar juegos de Switch, 3DS, Wii U, DS y Wii">
     <meta name="keywords" content="Nintendo, juegos, Switch, 3DS, Wii U, DS, Wii">
 </head>
@@ -48,26 +49,65 @@
                     <li class="navbar-item navbar-li"> <a href="log-in.html">Iniciar sesión</a> </li>
                 </ul>
             </div>
-
         </nav>
 
     </header>
 
-    <!-- Start of Catalog Page Content -->
+    <!-- Start of Search Results Page Content -->
 
     <main class="main-content" id="main-content">
-        <section class="games-in-category">
+        <h1>Resultados de "<span id="search-results-heading"></span>"</h1>
 
-            <h1>Categoria: <span id="catalog-heading"></span></h1>
-    
-            <ul id="games-in-category-ul">
+        <aside class="filter-options">
+            <form action="" class="filter-options-form"  id="filter-options-form" method="POST">
+                <div class="filter-field filter-btn-field">
+                        <input class="filter-btn" type="submit" id="submit-btn" value="Filtrar">
+                </div>
+                
+                <div class="filter-field">
+                    <input type="checkbox" id="all" name="console"
+                            value="all" checked>
+                    <label for="all">Todos</label>
+                </div>
+                <div class="filter-field">
+                    <input type="checkbox" id="switch" name="console"
+                            value="switch">
+                    <label for="switch">Switch</label>
+                </div>
+                <div class="filter-field">
+                    <input type="checkbox" id="n3ds" name="console"
+                            value="n3ds">
+                    <label for="n3ds">3DS</label>
+                </div>
+                <div class="filter-field">
+                    <input type="checkbox" id="wii-u" name="console"
+                            value="wii-u">
+                    <label for="wii-u">Wii U</label>
+                </div>
+                <div class="filter-field">
+                    <input type="checkbox" id="ds" name="console"
+                            value="ds">
+                    <label for="ds">DS</label>
+                </div>
+                <div class="filter-field">
+                    <input type="checkbox" id="wii" name="console"
+                            value="wii">
+                    <label for="wii">Wii</label>
+                </div>
+       
+            </form>
+        </aside>
+
+        <section class="search-results">
+
+            <ul id="search-results-ul">
 
             </ul>
     
         </section>
     </main>
 
-    <!-- End of Catalog Page Content -->
+    <!-- End of Search Results Page Content -->
 
     <footer class="main-footer">
         <nav class="footer-links">
@@ -95,7 +135,7 @@
 
     <script src="data/games.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/catalog-page.js"></script>
+    <script src="js/search-results-page.js"></script>
 
 </body>
 </html>

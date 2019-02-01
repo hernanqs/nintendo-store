@@ -21,30 +21,40 @@
         <button class="menu-icon" id="dropdown-btn" onclick="toggleDropdown()">
             <span class="fa fa-bars"></span>
         </button>
-        <div class="main-navbar dropdown">
-            <a href="sign-up.html">Crear cuenta</a>
-            <a href="log-in.html">Iniciar sesión</a>
-        </div>
-        <nav class="sub-navbar dropdown">
-            <ul class="navbar-ul">
-                <li class="navbar-item navbar-li"> <a href="catalog.html">Switch</a> </li>
-                <li class="navbar-item navbar-li"> <a href="catalog.html">3DS</a> </li>
-                <li class="navbar-item navbar-li"> <a href="catalog.html">Wii U</a> </li>
-                <li class="navbar-item navbar-li"> <a href="catalog.html">DS</a> </li>
-                <li class="navbar-item navbar-li"> <a href="catalog.html">Wii</a> </li>
-            </ul>
-            <form action="" class="navbar-form">
-                <input class="navbar-item navbar-form-input" type="text" placeholder="Buscar">
-                <button class="navbar-form-button" type="submit"><span class="fa fa-search navbar-item"></span></button>
+        <nav class="dropdown">
+
+            <form action="" id="search-form" class="navbar-form">
+                <input class="navbar-item navbar-form-input" id="search-text" type="text" placeholder="Buscar">
+                <button class="navbar-form-button" id="search-btn" type="submit"><span class="fa fa-search navbar-item"></span></button>
             </form>
+
+            <div class="sub-dropdown" id="catalog-sub-dropdown">
+                <button class="sub-dropdown-btn navbar-item" onclick="toggleCatalogSubDropdown()">Catálogo</button>
+                <ul class="navbar-ul catalog-ul">
+                    <li class="navbar-item navbar-li"> <a href="catalog.html?category=ALL">Todos</a> </li>
+                    <li class="navbar-item navbar-li"> <a href="catalog.html?category=switch">Switch</a> </li>
+                    <li class="navbar-item navbar-li"> <a href="catalog.html?category=n3ds">3DS</a> </li>
+                    <li class="navbar-item navbar-li"> <a href="catalog.html?category=wii-u">Wii U</a> </li>
+                    <li class="navbar-item navbar-li"> <a href="catalog.html?category=ds">DS</a> </li>
+                    <li class="navbar-item navbar-li"> <a href="catalog.html?category=wii">Wii</a> </li>
+                </ul>
+            </div>
+
+            <div class="sub-dropdown" id="log-sub-dropdown">
+                <button class="sub-dropdown-btn navbar-item" id="log-sub-dropdown-btn" onclick="toggleLogSubDropdown()">Ingresar</button>
+                <ul class="navbar-ul log-ul" id="log-ul">
+                    <li class="navbar-item navbar-li"> <a href="sign-up.html">Crear cuenta</a> </li>
+                    <li class="navbar-item navbar-li"> <a href="log-in.html">Iniciar sesión</a> </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <!-- Start of About Page Content -->
 
-    <main class="main-content">
-        <h1>Acerca de Nintendo</h1>
+    <main class="main-content" id="main-content">
         <section>
+            <h1>Acerca de Nintendo</h1>
             <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum nunc augue, id ullamcorper ligula pretium nec. Sed vel tempor nisi. Quisque ut lorem ligula. Nulla facilisi. Morbi vel viverra tortor, eu fringilla purus. Pellentesque ullamcorper ornare dolor vel ornare. Aliquam sagittis pellentesque leo at elementum. Etiam et vehicula arcu. Sed eu ullamcorper eros, a volutpat metus.</p>
             <p> Nam faucibus sodales diam, vitae consequat leo gravida sed. Aenean tincidunt velit erat, dictum egestas ipsum congue ac. Nam ac mi lectus. Maecenas id venenatis mi, eu faucibus metus. Maecenas consequat, nunc ut tempus molestie, erat turpis blandit ex, id hendrerit risus est non eros. Sed non eleifend massa. Quisque ut sagittis ante. Nam mollis, eros ut egestas lacinia, libero tortor auctor lacus, eget lacinia odio sapien eget elit. Mauris egestas erat eget ex viverra dignissim. Proin vitae consectetur magna.</p>
             <p> Donec eu quam vitae libero euismod congue a non odio. Mauris sit amet lorem convallis, dignissim odio ut, mollis turpis. Donec ullamcorper pulvinar mollis. In hac habitasse platea dictumst. In pellentesque varius pellentesque. Donec arcu diam, tincidunt non ullamcorper vitae, lobortis nec lacus. Pellentesque quis neque nibh. Nullam id urna eget neque malesuada blandit. Nulla ultrices accumsan arcu. Sed accumsan aliquet odio. Nullam tristique, tellus ac vulputate cursus, dui lacus molestie leo, sed eleifend justo eros eu leo. Ut et arcu lacinia, mollis sapien nec, faucibus leo. Phasellus vel lectus tincidunt, aliquet libero ac, porttitor dolor. Sed magna neque, tempor et fringilla sit amet, viverra non lacus.</p>
@@ -77,6 +87,7 @@
 
     </footer>
 
+    <script src="data/games.js"></script>
     <script src="js/main.js"></script>
 
 </body>

@@ -1,0 +1,38 @@
+/* Search Results Page Only Styles */
+
+.filter-options {
+    padding: 15px;
+	margin: 20px auto;
+	width: 1000px;
+    max-width: 100%;
+    border-radius: 5px;
+    background-color: #de0000;
+    color: #fff;
+	box-sizing: border-box;
+	box-shadow: 2px 2px 6px #808080;
+}
+.filter-field {
+    display: inline-block;
+    min-width: 100px;
+    margin: 5px;
+}
+.filter-btn-field {
+	display: block;
+}
+.filter-btn {
+	padding: 5px 10px;
+	margin: auto;
+	border: none;
+	border-radius: 5px;
+	background-color: #fff;
+	cursor: pointer;
+	color: #de0000;
+	font-size: 20px;
+}
+
+@media only screen and (min-width: 480px) {
+	.filter-options .filter-btn-field {
+		display: inline-block;
+	}	
+}
+

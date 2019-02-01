@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/purchase-page-styles.css">
+    <title>Nintendo Store</title>
+    <meta name="description" content="Tienda online de juegos de Nintendo. Puedes comprar juegos de Switch, 3DS, Wii U, DS y Wii">
+    <meta name="keywords" content="Nintendo, juegos, Switch, 3DS, Wii U, DS, Wii">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-img">
+            <a href="index.html">
+                <img src="img/nintendo-logo.png" alt="">
+            </a>
+        </div>
+        <button class="menu-icon" id="dropdown-btn" onclick="toggleDropdown()">
+            <span class="fa fa-bars"></span>
+        </button>
+        <nav class="dropdown">
+
+            <form action="" id="search-form" class="navbar-form">
+                <input class="navbar-item navbar-form-input" id="search-text" type="text" placeholder="Buscar">
+                <button class="navbar-form-button" id="search-btn" type="submit"><span class="fa fa-search navbar-item"></span></button>
+            </form>
+
+            <div class="sub-dropdown" id="catalog-sub-dropdown">
+                <button class="sub-dropdown-btn navbar-item" onclick="toggleCatalogSubDropdown()">Catálogo</button>
+                <ul class="navbar-ul catalog-ul">
+                    <li class="navbar-item navbar-li"> <a href="catalog.html?category=ALL">Todos</a> </li>
+                    <li class="navbar-item navbar-li"> <a href="catalog.html?category=switch">Switch</a> </li>
+                    <li class="navbar-item navbar-li"> <a href="catalog.html?category=n3ds">3DS</a> </li>
+                    <li class="navbar-item navbar-li"> <a href="catalog.html?category=wii-u">Wii U</a> </li>
+                    <li class="navbar-item navbar-li"> <a href="catalog.html?category=ds">DS</a> </li>
+                    <li class="navbar-item navbar-li"> <a href="catalog.html?category=wii">Wii</a> </li>
+                </ul>
+            </div>
+
+            <div class="sub-dropdown" id="log-sub-dropdown">
+                <button class="sub-dropdown-btn navbar-item" id="log-sub-dropdown-btn" onclick="toggleLogSubDropdown()">Ingresar</button>
+                <ul class="navbar-ul log-ul" id="log-ul">
+                    <li class="navbar-item navbar-li"> <a href="sign-up.html">Crear cuenta</a> </li>
+                    <li class="navbar-item navbar-li"> <a href="log-in.html">Iniciar sesión</a> </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+        
+    <!-- Start of Purchase Page Content -->
+     
+    <main class="main-content" id="main-content">
+        
+        <section itemscope itemtype="http://schema.org/VideoGame">
+            <div class="purchase-cover">
+                <img src="" itemprop="image" id="product-cover">
+            </div>
+
+            <h1 itemprop="name" id="product-name"></h1>
+
+            <h2>Precio total: U$S <span id="purchase-price"></span></h2>
+
+            <form action="" class="purchase-form" id="purchase-form">
+
+                <div class="form-field">
+                    <input type="submit" class="main-button" id="submit-purchase-btn" value="Comprar">
+                </div>    
+
+                <fieldset class="form-field">
+                    <label for="number-of-items">Cantidad: </label>
+                    <input type="number" id="number-of-items" value="1" min="1" max="99">    
+                </fieldset>
+
+                <fieldset class="purchase-fieldset">
+                    <legend>Formato: </legend>
+                    <div class="radio-form-field">
+                        <label for="cd">CD</label>
+                        <input type="radio" name="format" id="cd" required checked>
+                    </div>
+                    <div class="radio-form-field">
+                        <label for="digital">Digital</label>
+                        <input type="radio" name="format" id="digital" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-field" id="address-fieldset" disabled>
+                    <label for="address">Dirección de envío: </label>
+                    <input type="text" name="surname" id="address" required>
+                </fieldset>
+
+                <fieldset class="purchase-fieldset" id="delivery-method-fieldset" disabled>
+                    <legend>Método de envío: </legend>
+                    <div class="radio-form-field">
+                        <label for="common-method">Común (+0,5%)</label>
+                        <input type="radio" name="delivery-method" id="common-method" required checked="">
+                    </div>
+                    <div class="radio-form-field">
+                        <label for="special-method">Especial (+2%)</label>
+                        <input type="radio" name="delivery-method" id="special-method" required>
+                    </div>
+                    <div class="radio-form-field">
+                        <label for="premium-method">Premium (+5%)</label>
+                        <input type="radio" name="delivery-method" id="premium-method" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="purchase-fieldset">
+                    <legend>Medio de pago: </legend>
+                    <div class="radio-form-field">
+                        <label for="credit-card">Tarjeta de crédito</label>
+                        <input type="radio" name="payment-means" id="credit-card" required checked>
+                    </div>
+                    <div class="radio-form-field">
+                        <label for="paypal">Paypal</label>
+                        <input type="radio" name="payment-means" id="paypal" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-field">
+                    <label for="payment-account" id="payment-account-label"></label>
+                    <input type="text" name="surname" id="payment-account" required>
+                </fieldset>
+
+                <fieldset class="purchase-fieldset">
+                    <legend>Datos personales: </legend>
+
+                    <div class="form-field">
+                        <label for="surname">Apellido: </label>
+                        <input type="text" name="surname" id="surname" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="name">Nombre: </label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    
+                    <div class="form-field">
+                            <label for="email">Mail: </label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+
+                </fieldset>
+
+            </form>
+
+            <table class="price-table" id="price-table">
+                <thead class="price-table-head">
+                    <tr>
+                        <th>Concepto</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody class="price-table-body">
+                    <tr>
+                        <td>Precio original</td>
+                        <td id="price-table-original-price"></td>
+                    </tr>
+                    <tr>
+                        <td>Envío</td>
+                        <td id="price-table-delivery-cost"></td>
+                    </tr>
+                    <tr>
+                        <td>Impuestos</td>
+                        <td id="price-table-taxes"></td>
+                    </tr>
+                    <tr>
+                        <td>Precio por unidad</td>
+                        <td id="price-table-price-per-unit"></td>
+                    </tr>                </tbody>
+                <tfoot class="price-table-foot">
+                    <tr>
+                        <td>Precio total</td>
+                        <td id="price-table-total-price"></td>
+                    </tr>
+
+                </tfoot>
+            </table>
+
+        </section>
+
+    </main>
+
+    <!-- End of Purchase Page Content -->
+    
+    <footer class="main-footer">
+        <nav class="footer-links">
+            <ul>
+                <li class="footer-item"> <a href="about.html">Acerca de Nintendo</a> </li>
+                <li class="footer-item"> <a href="privacy-policy.html">Política de privacidad</a> </li>
+                <li class="footer-item"> <a href="contact.html">Contacto</a> </li>
+            </ul>
+        </nav>
+        <dl class="info" itemscope itemtype="http://schema.org/Store">
+            <meta itemprop="name" content="Nintendo Store">
+            <dt class="footer-item">Teléfono: </dt>
+            <dd class="footer-item" itemprop="telephone" content="+19811986">1981 1986</dd>
+            <dt class="footer-item">Dirección: </dt>
+            <dd class="footer-item">
+                <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <span itemprop="streetAddress">Mario St. 1889</span>
+                </address>
+            </dd>
+            <dt class="footer-item">Horarios: </dt> 
+            <dd class="footer-item" itemprop="openingHours" content="Mo-Fr 10:00-19:00">Lunes a viernes de 10:00 a 19:00 hs.</dd>
+        </dl>
+
+    </footer>
+
+    <script src="data/games.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/purchase-page.js"></script>
+
+</body>
+</html>
