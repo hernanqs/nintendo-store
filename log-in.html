@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Nintendo Store | Ingresar</title>
+    <meta name="description" content="Tienda online de juegos de Nintendo. Puedes comprar juegos de Switch, 3DS, Wii U, DS y Wii">
+    <meta name="keywords" content="Nintendo, juegos, Switch, 3DS, Wii U, DS y Wii">
+</head>
+<body>
+    <header class="main-header">
+        <div class="main-navbar">
+            <div class="header-img">
+                <a href="index.html">
+                    <img src="img/nintendo-logo.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="sign-up.html">Crear cuenta</a>
+                <a href="log-in.html">Iniciar sesión <span class="fa fa-user"></span></a>
+            </div>
+        </div>
+        <nav class="sub-navbar">
+            <ul class="navbar-ul">
+                <li class="navbar-item navbar-li"> <a href="catalog.html">Switch</a> </li>
+                <li class="navbar-item navbar-li"> <a href="catalog.html">3DS</a> </li>
+                <li class="navbar-item navbar-li"> <a href="catalog.html">Wii U</a> </li>
+                <li class="navbar-item navbar-li"> <a href="catalog.html">DS</a> </li>
+                <li class="navbar-item navbar-li"> <a href="catalog.html">Wii</a> </li>
+            </ul>
+            <form action="" class="navbar-form">
+                <input class="navbar-item" type="text" placeholder="Buscar">
+                <button type="submit"><span class="fa fa-search navbar-item"></span></button>
+            </form>
+        </nav>
+    </header>
+
+    <!-- Start of Log in Page Content -->
+
+    <main class="main-content">
+
+        <h1>Iniciar sesión</h1>
+
+        <form action="" class="log-in-form">
+
+            <div class="form-field">
+                    <label for="email">Mail: </label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-field">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" pattern="[0-9a-fA-F]{8,24}" minlength="8" maxlength="24" required>
+            </div>
+            <div class="form-field">
+                    <input type="submit" id="submit-btn" value="Ingresar">
+            </div>    
+    
+        </form>
+
+    </main>
+
+    <!-- End of Log in Page Content -->
+
+    <footer class="main-footer">
+        <div class="footer-links">
+            <a href="about.html">Acerca de Nintendo</a>
+            <a href="privacy-policy.html">Política de privacidad</a>
+            <a href="contact.html">Contacto</a>
+        </div>
+        <div class="info" itemscope itemtype="http://schema.org/Store">
+            <meta itemprop="name" content="Nintendo Store">
+            <p>Tel.: <span itemprop="telephone" content="+19811986">1981 1986</span></p>
+            <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">Dirección:
+                <span itemprop="streetAddress">Mario St. 1889</span>
+            </address>
+            <p>Horarios: <span itemprop="openingHours" content="Mo-Fr 10:00-19:00">Lunes a viernes de 10:00 a 19:00 hs.</span></p>
+        </div>
+    </footer>
+</body>
+</html>

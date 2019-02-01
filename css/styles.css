@@ -1,0 +1,182 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    min-height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header, .main-footer {
+    width: 100%;
+    background-color: red;
+    color: white;
+}
+
+.main-header a, .main-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-header {
+    flex: 0 0 auto;
+}
+
+.main-navbar {
+    display: flex;
+}
+
+.header-img {
+    height: 50px;
+    margin-right: auto;
+}
+
+.header-img img {
+    height: 100%;
+}
+
+.main-navbar a{
+    margin-right: 10px;
+}
+
+.sub-navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-li {
+    width: 80px;
+    padding: 0 3px;
+    box-shadow: 1px 1px black;
+    font-size: 1em;
+    text-align: center;
+}
+
+.navbar-form {
+    display: flex;
+}
+
+.navbar-item {
+    margin: 2px 2px;
+}
+
+.main-footer {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+span.fa {
+    margin: 2px 5px;
+}
+
+/* Home Page Styles */
+
+.main-content {
+    flex: 1 0 auto;
+    width: 900px;
+    margin: auto;
+}
+
+.section {
+    margin: 20px;
+}
+
+.section h2 {
+    border-bottom: 2px solid black;
+}
+
+.products {
+    display: flex;
+}
+
+.product {
+    width: 250px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-image {
+    width: 100%;
+}
+
+.product-image img {
+    width: 100%;
+}
+
+.product-name {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.product-price {
+    margin: 5px 0;
+}
+
+/* Sign Up and Contact Page Styles */
+
+.sign-up-form {
+    margin: 50px 0;
+}
+
+.form-field {
+    margin: 10px 0;
+}
+
+/* Product Page Styles */
+
+.additional-img {
+    width: 800px;
+}
+
+.additional-img img {
+    width: 100%;
+}
+
+.buy-btn {
+    background-color: red;
+    color: white;
+    font-size: 25px;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Catalog Page Styles */
+
+.filter-options {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+}
+
+.filter-options .form-field{
+    display: inline-block;
+    margin: 5px;
+}
