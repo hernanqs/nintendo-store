@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +8,24 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Nintendo Store | Catálogo</title>
     <meta name="description" content="Tienda online de juegos de Nintendo. Puedes comprar juegos de Switch, 3DS, Wii U, DS y Wii">
-    <meta name="keywords" content="Nintendo, juegos, Switch, 3DS, Wii U, DS y Wii">
+    <meta name="keywords" content="Nintendo, juegos, Switch, 3DS, Wii U, DS, Wii">
 </head>
 <body>
+
     <header class="main-header">
-        <div class="main-navbar">
-            <div class="header-img">
-                <a href="index.html">
-                    <img src="img/nintendo-logo.png" alt="">
-                </a>
-            </div>
-            <div>
-                <a href="sign-up.html">Crear cuenta</a>
-                <a href="log-in.html">Iniciar sesión <span class="fa fa-user"></span></a>
-            </div>
+        <div class="header-img">
+            <a href="index.html">
+                <img src="img/nintendo-logo.png" alt="">
+            </a>
         </div>
-        <nav class="sub-navbar">
+        <button class="menu-icon" id="dropdown-btn" onclick="toggleDropdown()">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="main-navbar dropdown">
+            <a href="sign-up.html">Crear cuenta</a>
+            <a href="log-in.html">Iniciar sesión</a>
+        </div>
+        <nav class="sub-navbar dropdown">
             <ul class="navbar-ul">
                 <li class="navbar-item navbar-li"> <a href="catalog.html">Switch</a> </li>
                 <li class="navbar-item navbar-li"> <a href="catalog.html">3DS</a> </li>
@@ -32,67 +34,159 @@
                 <li class="navbar-item navbar-li"> <a href="catalog.html">Wii</a> </li>
             </ul>
             <form action="" class="navbar-form">
-                <input class="navbar-item" type="text" placeholder="Buscar">
-                <button type="submit"><span class="fa fa-search navbar-item"></span></button>
+                <input class="navbar-item navbar-form-input" type="text" placeholder="Buscar">
+                <button class="navbar-form-button" type="submit"><span class="fa fa-search navbar-item"></span></button>
             </form>
         </nav>
     </header>
 
     <!-- Start of Catalog Page Content -->
 
-    <div class="filter-options">
-        <form action="" class="filter-options-form">
-            <div class="form-field">
-                    <input type="submit" id="submit-btn" value="Filtrar">
-            </div>
-            
-            <div class="form-field">
-                <input type="checkbox" id="all" name="console"
-                        value="all" checked>
-                <label for="all">Todos</label>
-            </div>
-            <div class="form-field">
-                <input type="checkbox" id="switch" name="console"
-                        value="switch">
-                <label for="switch">Switch</label>
-            </div>
-            <div class="form-field">
-                <input type="checkbox" id="n3ds" name="console"
-                        value="n3ds">
-                <label for="n3ds">3DS</label>
-            </div>
-            <div class="form-field">
-                <input type="checkbox" id="wii-u" name="console"
-                        value="wii-u">
-                <label for="wii-u">Wii U</label>
-            </div>
-            <div class="form-field">
-                <input type="checkbox" id="ds" name="console"
-                        value="ds">
-                <label for="ds">DS</label>
-            </div>
-            <div class="form-field">
-                <input type="checkbox" id="wii" name="console"
-                        value="wii">
-                <label for="wii">Wii</label>
-            </div>
-   
-        </form>
-    </div class="form-field">
-
     <main class="main-content">
         <h1>Resultados de "Twilight Princess"</h1>
+
+        <aside class="filter-options">
+            <form action="" class="filter-options-form">
+                <div class="filter-field filter-btn-field">
+                        <input class="filter-btn" type="submit" id="submit-btn" value="Filtrar">
+                </div>
+                
+                <div class="filter-field">
+                    <input type="checkbox" id="all" name="console"
+                            value="all" checked>
+                    <label for="all">Todos</label>
+                </div>
+                <div class="filter-field">
+                    <input type="checkbox" id="switch" name="console"
+                            value="switch">
+                    <label for="switch">Switch</label>
+                </div>
+                <div class="filter-field">
+                    <input type="checkbox" id="n3ds" name="console"
+                            value="n3ds">
+                    <label for="n3ds">3DS</label>
+                </div>
+                <div class="filter-field">
+                    <input type="checkbox" id="wii-u" name="console"
+                            value="wii-u">
+                    <label for="wii-u">Wii U</label>
+                </div>
+                <div class="filter-field">
+                    <input type="checkbox" id="ds" name="console"
+                            value="ds">
+                    <label for="ds">DS</label>
+                </div>
+                <div class="filter-field">
+                    <input type="checkbox" id="wii" name="console"
+                            value="wii">
+                    <label for="wii">Wii</label>
+                </div>
+       
+            </form>
+        </aside>
+
         <section class="search-results">
 
-            <article class="product">
-                <div class="product-image">
-                    <a href="product.html">
-                        <img src="img/zelda-twilight-princess-wii-cover.png" alt="Portada del juego The Legend of Zelda Twilight Princess para Nintendo Wii">
-                    </a>
-                </div>
-                <h3 class="product-name">The Legend of Zelda Twilight Princess (Wii)</h3>
-                <p class="product-price">US$100</p>
-            </article>
+            <ul>
+                <li>
+
+                    <article class="product">
+                        <div class="product-image">
+                            <a href="product.html">
+                                <img src="img/zelda-twilight-princess-wii-cover.png" alt="Portada del juego The Legend of Zelda Twilight Princess para Nintendo Wii">
+                            </a>
+                        </div>
+                        <h3 class="product-name">The Legend of Zelda Twilight Princess (Wii)</h3>
+                        <p class="product-price">US$100</p>
+                    </article>
+                    
+                </li>
+
+                <li>
+
+                    <article class="product">
+                        <div class="product-image">
+                            <a href="product.html">
+                                <img src="img/zelda-twilight-princess-wii-cover.png" alt="Portada del juego The Legend of Zelda Twilight Princess para Nintendo Wii">
+                            </a>
+                        </div>
+                        <h3 class="product-name">The Legend of Zelda Twilight Princess (Wii)</h3>
+                        <p class="product-price">US$100</p>
+                    </article>
+                    
+                </li>
+
+                <li>
+                    
+                    <article class="product">
+                        <div class="product-image">
+                            <a href="product.html">
+                                <img src="img/zelda-twilight-princess-wii-cover.png" alt="Portada del juego The Legend of Zelda Twilight Princess para Nintendo Wii">
+                            </a>
+                        </div>
+                        <h3 class="product-name">The Legend of Zelda Twilight Princess (Wii)</h3>
+                        <p class="product-price">US$100</p>
+                    </article>
+
+                </li>
+
+                <li>
+                    
+                    <article class="product">
+                        <div class="product-image">
+                            <a href="product.html">
+                                <img src="img/zelda-twilight-princess-wii-cover.png" alt="Portada del juego The Legend of Zelda Twilight Princess para Nintendo Wii">
+                            </a>
+                        </div>
+                        <h3 class="product-name">The Legend of Zelda Twilight Princess (Wii)</h3>
+                        <p class="product-price">US$100</p>
+                    </article>
+
+                </li>
+
+                <li>
+                    
+                    <article class="product">
+                        <div class="product-image">
+                            <a href="product.html">
+                                <img src="img/zelda-twilight-princess-wii-cover.png" alt="Portada del juego The Legend of Zelda Twilight Princess para Nintendo Wii">
+                            </a>
+                        </div>
+                        <h3 class="product-name">The Legend of Zelda Twilight Princess (Wii)</h3>
+                        <p class="product-price">US$100</p>
+                    </article>
+
+                </li>
+
+                <li>
+                    
+                    <article class="product">
+                        <div class="product-image">
+                            <a href="product.html">
+                                <img src="img/zelda-twilight-princess-wii-cover.png" alt="Portada del juego The Legend of Zelda Twilight Princess para Nintendo Wii">
+                            </a>
+                        </div>
+                        <h3 class="product-name">The Legend of Zelda Twilight Princess (Wii)</h3>
+                        <p class="product-price">US$100</p>
+                    </article>
+
+                </li>
+
+                <li>
+                    
+                    <article class="product">
+                        <div class="product-image">
+                            <a href="product.html">
+                                <img src="img/zelda-twilight-princess-wii-cover.png" alt="Portada del juego The Legend of Zelda Twilight Princess para Nintendo Wii">
+                            </a>
+                        </div>
+                        <h3 class="product-name">The Legend of Zelda Twilight Princess (Wii)</h3>
+                        <p class="product-price">US$100</p>
+                    </article>
+
+                </li>
+
+            </ul>
     
         </section>
     </main>
@@ -100,19 +194,30 @@
     <!-- End of Catalog Page Content -->
 
     <footer class="main-footer">
-        <div class="footer-links">
-            <a href="about.html">Acerca de Nintendo</a>
-            <a href="privacy-policy.html">Política de privacidad</a>
-            <a href="contact.html">Contacto</a>
-        </div>
-        <div class="info" itemscope itemtype="http://schema.org/Store">
+        <nav class="footer-links">
+            <ul>
+                <li class="footer-item"> <a href="about.html">Acerca de Nintendo</a> </li>
+                <li class="footer-item"> <a href="privacy-policy.html">Política de privacidad</a> </li>
+                <li class="footer-item"> <a href="contact.html">Contacto</a> </li>
+            </ul>
+        </nav>
+        <dl class="info" itemscope itemtype="http://schema.org/Store">
             <meta itemprop="name" content="Nintendo Store">
-            <p>Tel.: <span itemprop="telephone" content="+19811986">1981 1986</span></p>
-            <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">Dirección:
-                <span itemprop="streetAddress">Mario St. 1889</span>
-            </address>
-            <p>Horarios: <span itemprop="openingHours" content="Mo-Fr 10:00-19:00">Lunes a viernes de 10:00 a 19:00 hs.</span></p>
-        </div>
+            <dt class="footer-item">Teléfono: </dt>
+            <dd class="footer-item" itemprop="telephone" content="+19811986">1981 1986</dd>
+            <dt class="footer-item">Dirección: </dt>
+            <dd class="footer-item">
+                <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <span itemprop="streetAddress">Mario St. 1889</span>
+                </address>
+            </dd>
+            <dt class="footer-item">Horarios: </dt> 
+            <dd class="footer-item" itemprop="openingHours" content="Mo-Fr 10:00-19:00">Lunes a viernes de 10:00 a 19:00 hs.</dd>
+        </dl>
+
     </footer>
+
+    <script src="js/main.js"></script>
+
 </body>
 </html>
